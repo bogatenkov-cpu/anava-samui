@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ANAVA Samui — First Freehold Oceanview Condominium in Koh Samui</title>
-  <meta name="description" content="ANAVA is the first and only freehold oceanview condominium in Koh Samui in 20 years. Wrap-around 2,000 m² pool, fixed 6% ROI, hotel management. Studios from $105,000." />
+  <title>ANAVA Samui - Luxury Freehold Oceanview Condominiums in Koh Samui, Thailand</title>
+  <meta name="description" content="Discover ANAVA Samui, the first freehold oceanview condominium in Koh Samui in 20+ years. Beachfront luxury apartments with guaranteed 6% ROI, innovative wrap-around pool design, and premium amenities. Investment opportunity in prime Bangrak Beach location." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -27,6 +27,12 @@
     .section-title{font-family:var(--font-heading);font-size:clamp(32px,4.5vw,52px);font-weight:300;color:var(--text-mid);margin-bottom:48px}
     .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
     .reveal.visible{opacity:1;transform:none}
+    
+    .lang-switch{display:flex;gap:4px;margin-left:16px}
+    .lang-switch__btn{font-family:var(--font-ui);font-size:11px;font-weight:600;padding:4px 10px;border-radius:4px;border:1.5px solid rgba(255,255,255,.4);background:transparent;color:rgba(255,255,255,.7);cursor:pointer;transition:.2s;letter-spacing:.05em}
+    .lang-switch__btn.active{background:rgba(255,255,255,.9);color:var(--teal);border-color:rgba(255,255,255,.9)}
+    .nav.solid .lang-switch__btn{border-color:rgba(0,0,0,.2);color:var(--text-mid)}
+    .nav.solid .lang-switch__btn.active{background:var(--teal);color:var(--white);border-color:var(--teal)}
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 var(--px);height:64px;background:rgba(242,237,230,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.06);transition:background .3s}
     .nav.transparent{background:transparent;border-bottom-color:transparent}
     .nav__logo{font-family:var(--font-heading);font-size:20px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:var(--white)}
@@ -35,6 +41,7 @@
     .nav__links a{font-family:var(--font-ui);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--white);opacity:.85;transition:opacity .2s}
     .nav.solid .nav__links a{color:var(--text-dark)}
     .nav__links a:hover{opacity:1}
+    .nav__right{display:flex;align-items:center;gap:12px}
     .nav__call-btn{font-family:var(--font-ui);font-size:13px;padding:9px 22px;border-radius:100px;border:1.5px solid var(--white);color:var(--white);background:transparent;cursor:pointer;transition:background .2s,color .2s}
     .nav.solid .nav__call-btn{border-color:var(--teal);color:var(--teal)}
     .nav__call-btn:hover{background:var(--white);color:var(--teal)}
@@ -146,9 +153,10 @@
     .form-input--light{color:var(--text-dark);border-bottom-color:rgba(0,0,0,.2)}
     .form-input--light::placeholder{color:var(--text-muted)}
     .form-input--light:focus{border-bottom-color:var(--teal)}
-    .form-privacy{font-size:11px;color:rgba(255,255,255,.45);text-align:center;margin-top:12px;line-height:1.6}
-    .form-privacy--light{color:var(--text-muted)}
-    .form-privacy a{text-decoration:underline}
+    .form-consent{display:flex;align-items:flex-start;gap:8px;font-size:11px;color:rgba(255,255,255,.45);margin-top:12px;line-height:1.6;cursor:pointer}
+    .form-consent input{margin-top:3px;flex-shrink:0}
+    .form-consent a{text-decoration:underline}
+    .form-consent--light{color:var(--text-muted)}
     .form-success{display:none;text-align:center;padding:20px;color:var(--white);font-size:16px}
     .footer{background:var(--teal-dark);padding:32px var(--px);display:flex;justify-content:space-between;align-items:center;font-family:var(--font-ui);font-size:12px;color:rgba(255,255,255,.4)}
     .footer a{color:rgba(255,255,255,.5)}
@@ -173,7 +181,7 @@
 </head>
 <body>
   <nav class="nav transparent" id="mainNav">
-    <a href="#" class="nav__logo">ANAVA Samui</a>
+    <a href="#" class="nav__logo">ANAVA Samui Oceanview Condominium</a>
     <ul class="nav__links" id="navLinks">
       <li><a href="#concept">Concept</a></li>
       <li><a href="#amenities">Amenities</a></li>
@@ -182,34 +190,37 @@
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#location">Location</a></li>
     </ul>
-    <button class="nav__call-btn" onclick="openModal('nav')">Request a Call</button>
+    <div class="nav__right">
+      
+      <button class="nav__call-btn" onclick="openModal('nav')">Request a Call</button>
+    </div>
     <div class="nav__burger" id="burger"><span></span><span></span><span></span></div>
   </nav>
 
   <section class="hero">
-    <div class="hero__bg" id="heroBg" style="background-image:url('images/hero.jpg')"></div>
+    <div class="hero__bg" id="heroBg" style="background-image:url('https://www.anavasamui.com/images/hero-anava-samui.jpg')"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <h1 class="hero__title">The First Freehold Oceanview Condo in Koh Samui in 20 Years</h1>
-      <p class="hero__desc">ANAVA Samui is a landmark beachfront condominium on Bangrak Beach featuring an innovative 2,000 m² wrap-around pool, world-class hotel management, and a guaranteed fixed return on investment. Freehold ownership available for foreign buyers.</p>
+      <h1 class="hero__title">ANAVA Samui - First Freehold Oceanview Condominium in 20 Years</h1>
+      <p class="hero__desc">Experience luxury tropical living at Koh Samui's most prestigious beachfront development. ANAVA Samui features an innovative wrap-around swimming pool design, world-class amenities, and guaranteed fixed 6% return on investment for foreign investors seeking both lifestyle and financial gains.</p>
     </div>
     <div class="hero__stats">
       <div class="hero__stats-inner">
         <div class="hero__stat">
-          <span class="hero__stat-value">From $105,000</span>
+          <span class="hero__stat-value">From $104,000</span>
           <span class="hero__stat-label">Starting Price</span>
         </div>
         <div class="hero__stat">
-          <span class="hero__stat-value">6% Fixed ROI</span>
-          <span class="hero__stat-label">Guaranteed Return</span>
+          <span class="hero__stat-value">6%</span>
+          <span class="hero__stat-label">Guaranteed ROI</span>
         </div>
         <div class="hero__stat">
-          <span class="hero__stat-value">Freehold</span>
-          <span class="hero__stat-label">Ownership</span>
+          <span class="hero__stat-value">Jan 2027</span>
+          <span class="hero__stat-label">Completion Date</span>
         </div>
         <div class="hero__stat">
-          <span class="hero__stat-value">Q1 2027</span>
-          <span class="hero__stat-label">Handover</span>
+          <span class="hero__stat-value">564 Units</span>
+          <span class="hero__stat-label">Total Units</span>
         </div></div>
     </div>
   </section>
@@ -217,9 +228,10 @@
   <section class="section concept" id="concept">
     <div class="concept__grid">
       <div class="concept__text reveal">
-        <h2 class="section-title">A New Standard of Island Living</h2>
-        <p>ANAVA Condominium is a landmark project — <strong>the first and only freehold oceanview condominium in Koh Samui in over two decades</strong>. Set on a 14,000 m² beachfront plot on Bangrak Beach, the development comprises 13 buildings, 4 floors, and 564 meticulously designed units.</p>
-        <p>The innovative wrap-around swimming pool seamlessly connects the entire property, creating a <strong>water-themed living experience</strong> like no other on the island. Partnered with a world-renowned hotel management company, ANAVA delivers top-tier hospitality standards alongside guaranteed investment returns.</p>
+        <h2 class="section-title">Landmark Development - First Freehold Oceanview Condominium</h2>
+        <p>ANAVA Samui is a <strong>landmark project set to become the first and only freehold oceanview condominium in Koh Samui in over two decades</strong>. This exclusive development combines sophisticated architectural design with innovative living concepts, featuring a <strong>unique wrap-around swimming pool that seamlessly connects the entire property</strong>, creating a stunning water-themed living experience unlike any other on the island.</p>
+        <p>Uniquely positioned on pristine <strong>Bangrak Beach with direct beachfront access</strong>, ANAVA Samui integrates residential living, vacation opportunities, and investment potential. The project is developed by <strong>Zhongfa Property (HK) Limited</strong> in partnership with a world-renowned hotel management company, ensuring top-tier services and unmatched hospitality standards throughout the development.</p>
+        <p>As <strong>the only condominium in Koh Samui offering investors a guaranteed fixed return on investment</strong>, ANAVA Samui presents an exceptional opportunity for those seeking both a luxurious tropical home and secure financial returns. With freehold ownership options for foreign buyers and strategic proximity to Samui International Airport, this beachfront property offers unparalleled investment potential in Thailand's most sought-after destination.</p>
         <div class="concept__ctas">
           <a href="#layouts" class="btn btn--gold">Explore Layouts</a>
           <a href="#roi" class="btn btn--teal-outline">Investment Details</a>
@@ -228,91 +240,97 @@
       <div class="concept__specs reveal" style="transition-delay:.15s">
           <div class="concept__spec-row">
             <span class="concept__spec-key">Location</span>
-            <span class="concept__spec-val">Bangrak Beach, Koh Samui</span>
+            <span class="concept__spec-val">Bang Rak Beach, Bo Phut, Koh Samui, Surat Thani</span>
+          </div>
+          <div class="concept__spec-row">
+            <span class="concept__spec-key">Developer</span>
+            <span class="concept__spec-val">Zhongfa Property (HK) Limited</span>
           </div>
           <div class="concept__spec-row">
             <span class="concept__spec-key">Total Units</span>
-            <span class="concept__spec-val">564</span>
+            <span class="concept__spec-val">564 units across 13 buildings</span>
           </div>
           <div class="concept__spec-row">
-            <span class="concept__spec-key">Unit Size</span>
-            <span class="concept__spec-val">from 28 m²</span>
+            <span class="concept__spec-key">Building Structure</span>
+            <span class="concept__spec-val">Low-rise, 4 floors</span>
           </div>
           <div class="concept__spec-row">
-            <span class="concept__spec-key">Views</span>
-            <span class="concept__spec-val">sea or pool</span>
+            <span class="concept__spec-key">Completion Date</span>
+            <span class="concept__spec-val">January 2027</span>
           </div>
           <div class="concept__spec-row">
-            <span class="concept__spec-key">Furniture and Finishes</span>
-            <span class="concept__spec-val">included</span>
+            <span class="concept__spec-key">Unit Types</span>
+            <span class="concept__spec-val">Studio, 1BR, 2BR, 3BR, 4BR Villas</span>
           </div>
           <div class="concept__spec-row">
-            <span class="concept__spec-key">Ownership</span>
-            <span class="concept__spec-val">Freehold</span>
+            <span class="concept__spec-key">Ownership Type</span>
+            <span class="concept__spec-val">Freehold for Foreign Buyers (49% Foreign Quota)</span>
+          </div>
+          <div class="concept__spec-row">
+            <span class="concept__spec-key">Main Feature</span>
+            <span class="concept__spec-val">2,077 sqm wrap-around swimming pool connecting entire property</span>
           </div></div>
     </div>
   </section>
 
   
-  <section class="sell-banner">
-    <div class="sell-banner__bg" style="background-image:url('images/sell-banner.jpg')"></div>
-    <div class="sell-banner__content">
-      <div></div>
-      <div class="sell-banner__form-box reveal">
-        <div class="sell-banner__form-title">Interested in Selling<br>Your Unit in ANAVA?</div>
-        <div class="sell-banner__form-subtitle">Get in touch — we'll connect you with qualified buyers and guide you through a smooth, secure transaction.</div>
-        <form onsubmit="submitForm(event,'sell')">
-          <div class="form-group"><input type="text" name="name" class="form-input form-input--light" placeholder="Your name" required /></div>
-          <div class="form-group"><input type="email" name="email" class="form-input form-input--light" placeholder="Email" /></div>
-          <div class="form-group"><input type="tel" name="phone" class="form-input form-input--light" placeholder="Phone number" required /></div>
-          <input type="hidden" name="formname" value="Sell Banner" />
-          <button type="submit" class="btn btn--gold" style="width:100%;margin-top:12px">Get a Valuation</button>
-          <p class="form-privacy form-privacy--light">I confirm I have read and accept the <a href="#">Privacy Policy</a></p>
-        </form>
-      </div>
-    </div>
-  </section>
 
   <section class="section section--cream" id="amenities">
     <div class="container">
       <div class="amenities__grid">
         <div class="amenities__image reveal">
-          <img src="images/amenities.jpg" alt="World-Class Amenities" loading="lazy" />
+          <img src="https://www.anavasamui.com/images/amenities-pool.jpg" alt="World-Class Amenities" loading="lazy" />
         </div>
         <div class="reveal" style="transition-delay:.15s">
           <h2 class="section-title">World-Class Amenities</h2>
           <div class="amenities__list">
             <div class="amenities__item">
               <span class="amenities__num">01</span>
-              <span class="amenities__name">2,000 m² wrap-around connected swimming pool</span>
+              <span class="amenities__name">2,077 sqm Wrap-Around Swimming Pool</span>
             </div>
             <div class="amenities__item">
               <span class="amenities__num">02</span>
-              <span class="amenities__name">Direct beachfront access to Bangrak Beach</span>
+              <span class="amenities__name">24/7 Security with CCTV Surveillance</span>
             </div>
             <div class="amenities__item">
               <span class="amenities__num">03</span>
-              <span class="amenities__name">On-site restaurant &amp; bar</span>
+              <span class="amenities__name">State-of-the-Art Fitness Center</span>
             </div>
             <div class="amenities__item">
               <span class="amenities__num">04</span>
-              <span class="amenities__name">State-of-the-art fitness center</span>
+              <span class="amenities__name">On-Site Restaurant &amp; Dining</span>
             </div>
             <div class="amenities__item">
               <span class="amenities__num">05</span>
-              <span class="amenities__name">24/7 concierge &amp; hotel management</span>
+              <span class="amenities__name">Direct Beach Access - Bang Rak Beach</span>
             </div>
             <div class="amenities__item">
               <span class="amenities__num">06</span>
-              <span class="amenities__name">Tropical landscaped gardens</span>
+              <span class="amenities__name">Concierge Services</span>
             </div>
             <div class="amenities__item">
               <span class="amenities__num">07</span>
-              <span class="amenities__name">Security &amp; CCTV system</span>
+              <span class="amenities__name">Spa &amp; Wellness Facilities</span>
             </div>
             <div class="amenities__item">
               <span class="amenities__num">08</span>
-              <span class="amenities__name">Covered parking (75 spaces)</span>
+              <span class="amenities__name">Lush Landscaped Gardens</span>
+            </div>
+            <div class="amenities__item">
+              <span class="amenities__num">09</span>
+              <span class="amenities__name">Covered Parking</span>
+            </div>
+            <div class="amenities__item">
+              <span class="amenities__num">10</span>
+              <span class="amenities__name">Water Sports Access</span>
+            </div>
+            <div class="amenities__item">
+              <span class="amenities__num">11</span>
+              <span class="amenities__name">Hotel Management Services</span>
+            </div>
+            <div class="amenities__item">
+              <span class="amenities__num">12</span>
+              <span class="amenities__name">High-Speed WiFi</span>
             </div></div>
         </div>
       </div>
@@ -325,20 +343,21 @@
         <h3>Download the Full Project Catalogue</h3>
         <div class="catalogue__tags"><span class="catalogue__tag">Floor Plans</span>
           <span class="catalogue__tag">Pricing</span>
-          <span class="catalogue__tag">Payment Plans</span>
-          <span class="catalogue__tag">ROI Forecast</span></div>
+          <span class="catalogue__tag">Unit Specifications</span></div>
         <form onsubmit="submitForm(event,'catalogue')" style="margin-top:32px">
+          
           <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Your name" required /></div>
-          <div class="form-group"><input type="email" name="email" class="form-input" placeholder="Email" /></div>
           <div class="form-group"><input type="tel" name="phone" class="form-input" placeholder="Phone number" required /></div>
+          <div class="form-group"><input type="email" name="email" class="form-input" placeholder="Email" /></div>
           <input type="hidden" name="formname" value="Catalogue" />
           <button type="submit" class="btn btn--gold" style="width:100%;margin-top:12px">Get the Catalogue</button>
-          <p class="form-privacy">I confirm I have read and accept the <a href="#">Privacy Policy</a></p>
+          
+          <label class="form-consent"><input type="checkbox" name="privacy" required /> <span>I confirm I have read and accept the <a href="#">Privacy Policy</a></span></label>
           <div class="form-success">Thank you! We'll be in touch shortly.</div>
         </form>
       </div>
       <div class="catalogue__image">
-        <img src="images/catalogue.jpg" alt="ANAVA Samui catalogue" loading="lazy" />
+        <img src="" alt="ANAVA Samui Oceanview Condominium catalogue" loading="lazy" />
       </div>
     </div>
   </section>
@@ -350,7 +369,7 @@
 
         <div class="layout-item">
           <button class="layout-item__header" onclick="toggleLayout(this)">
-            <span>Studio — from $105,000</span>
+            <span>Studio — from $104,000</span>
             <span class="toggle">+</span>
           </button>
           <div class="layout-item__body">
@@ -358,7 +377,7 @@
               <div style="color:rgba(255,255,255,.4);font-family:var(--font-ui);font-size:14px;text-align:center">Floor plan<br>available upon request</div>
             </div>
             <div class="layout-item__specs">
-              <div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Unit Size</span><span class="layout-item__spec-val">from 28 m²</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">View</span><span class="layout-item__spec-val">Ocean / Pool / Garden</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Furnishing</span><span class="layout-item__spec-val">Fully Furnished</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bathroom</span><span class="layout-item__spec-val">1</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Ownership</span><span class="layout-item__spec-val">Freehold</span></div></div>
+              <div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Unit Size</span><span class="layout-item__spec-val">28-38 m²</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bedrooms</span><span class="layout-item__spec-val">Studio</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bathrooms</span><span class="layout-item__spec-val">1</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">View</span><span class="layout-item__spec-val">[estimated] Ocean View or Garden View</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Furnishing</span><span class="layout-item__spec-val">Fully Furnished</span></div></div>
               <button class="btn btn--gold layout-item__cta" onclick="openModal('layouts')">Request Floor Plan</button>
             </div>
           </div>
@@ -366,7 +385,7 @@
 
         <div class="layout-item">
           <button class="layout-item__header" onclick="toggleLayout(this)">
-            <span>1 Bedroom — from $150,000</span>
+            <span>1 Bedroom — from $125,000</span>
             <span class="toggle">+</span>
           </button>
           <div class="layout-item__body">
@@ -374,7 +393,7 @@
               <div style="color:rgba(255,255,255,.4);font-family:var(--font-ui);font-size:14px;text-align:center">Floor plan<br>available upon request</div>
             </div>
             <div class="layout-item__specs">
-              <div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Unit Size</span><span class="layout-item__spec-val">from 35 m²</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">View</span><span class="layout-item__spec-val">Ocean / Pool</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Furnishing</span><span class="layout-item__spec-val">Fully Furnished</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bathroom</span><span class="layout-item__spec-val">1</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Ownership</span><span class="layout-item__spec-val">Freehold</span></div></div>
+              <div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Unit Size</span><span class="layout-item__spec-val">35-45 m²</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bedrooms</span><span class="layout-item__spec-val">1</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bathrooms</span><span class="layout-item__spec-val">1</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">View</span><span class="layout-item__spec-val">[estimated] Ocean View or Partial Sea View</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Furnishing</span><span class="layout-item__spec-val">Fully Furnished with High-End Finishes</span></div></div>
               <button class="btn btn--gold layout-item__cta" onclick="openModal('layouts')">Request Floor Plan</button>
             </div>
           </div>
@@ -382,7 +401,7 @@
 
         <div class="layout-item">
           <button class="layout-item__header" onclick="toggleLayout(this)">
-            <span>2 Bedroom — from $245,000</span>
+            <span>2 Bedroom — from $200,000</span>
             <span class="toggle">+</span>
           </button>
           <div class="layout-item__body">
@@ -390,7 +409,39 @@
               <div style="color:rgba(255,255,255,.4);font-family:var(--font-ui);font-size:14px;text-align:center">Floor plan<br>available upon request</div>
             </div>
             <div class="layout-item__specs">
-              <div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Unit Size</span><span class="layout-item__spec-val">from 55 m²</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">View</span><span class="layout-item__spec-val">Ocean / Pool</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Furnishing</span><span class="layout-item__spec-val">Fully Furnished</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bathrooms</span><span class="layout-item__spec-val">2</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Ownership</span><span class="layout-item__spec-val">Freehold</span></div></div>
+              <div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Unit Size</span><span class="layout-item__spec-val">49-69 m²</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bedrooms</span><span class="layout-item__spec-val">2</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bathrooms</span><span class="layout-item__spec-val">2</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">View</span><span class="layout-item__spec-val">Sea View with Spacious Balcony</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Furnishing</span><span class="layout-item__spec-val">Fully Furnished Luxury Finishes</span></div></div>
+              <button class="btn btn--gold layout-item__cta" onclick="openModal('layouts')">Request Floor Plan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="layout-item">
+          <button class="layout-item__header" onclick="toggleLayout(this)">
+            <span>3 Bedroom — from $350,000</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="layout-item__body">
+            <div class="layout-item__plan">
+              <div style="color:rgba(255,255,255,.4);font-family:var(--font-ui);font-size:14px;text-align:center">Floor plan<br>available upon request</div>
+            </div>
+            <div class="layout-item__specs">
+              <div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Unit Size</span><span class="layout-item__spec-val">96+ m²</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bedrooms</span><span class="layout-item__spec-val">3</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bathrooms</span><span class="layout-item__spec-val">2-3</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">View</span><span class="layout-item__spec-val">Oceanfront Sea View</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Furnishing</span><span class="layout-item__spec-val">Fully Furnished Premium Fixtures</span></div></div>
+              <button class="btn btn--gold layout-item__cta" onclick="openModal('layouts')">Request Floor Plan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="layout-item">
+          <button class="layout-item__header" onclick="toggleLayout(this)">
+            <span>4 Bedroom Beach Villa — from $1,200,000</span>
+            <span class="toggle">+</span>
+          </button>
+          <div class="layout-item__body">
+            <div class="layout-item__plan">
+              <div style="color:rgba(255,255,255,.4);font-family:var(--font-ui);font-size:14px;text-align:center">Floor plan<br>available upon request</div>
+            </div>
+            <div class="layout-item__specs">
+              <div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Unit Size</span><span class="layout-item__spec-val">461 m²</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bedrooms</span><span class="layout-item__spec-val">4</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Bathrooms</span><span class="layout-item__spec-val">4-5</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">View</span><span class="layout-item__spec-val">Direct Beachfront with Unobstructed Sea Views</span></div><div class="layout-item__spec-row"><span class="layout-item__spec-key">Furnishing</span><span class="layout-item__spec-val">Fully Furnished with Private Pool</span></div></div>
               <button class="btn btn--gold layout-item__cta" onclick="openModal('layouts')">Request Floor Plan</button>
             </div>
           </div>
@@ -401,22 +452,30 @@
 
   <section class="section" id="roi">
     <div class="container">
-      <h2 class="section-title reveal">Investment Returns</h2>
+      <h2 class="section-title reveal">Investment Returns - Guaranteed 6% Fixed ROI</h2>
       <div class="roi__table-wrap reveal" style="transition-delay:.1s">
         <table class="roi__table">
           <thead><tr><th>Unit Type</th><th>Size</th><th>Price From</th><th>Guaranteed ROI</th><th>Est. Annual Income</th></tr></thead>
           <tbody>
             <tr>
-              <td>Studio</td><td>28 – 29 m²</td><td>$105,000</td>
-              <td><span class="roi__badge">6%</span></td><td>$6,300</td>
+              <td>Studio</td><td>30 m²</td><td>$104,000</td>
+              <td><span class="roi__badge">6%</span></td><td>$6,240</td>
             </tr>
             <tr>
-              <td>1 Bedroom</td><td>35 – 45 m²</td><td>$150,000</td>
-              <td><span class="roi__badge">6%</span></td><td>$9,000</td>
+              <td>1 Bedroom</td><td>40 m²</td><td>$125,000</td>
+              <td><span class="roi__badge">6%</span></td><td>$7,500</td>
             </tr>
             <tr>
-              <td>2 Bedroom</td><td>55 – 63 m²</td><td>$245,000</td>
-              <td><span class="roi__badge">6%</span></td><td>$14,700</td>
+              <td>2 Bedroom</td><td>60 m²</td><td>$200,000</td>
+              <td><span class="roi__badge">6%</span></td><td>$12,000</td>
+            </tr>
+            <tr>
+              <td>3 Bedroom</td><td>96 m²</td><td>$350,000</td>
+              <td><span class="roi__badge">6%</span></td><td>$21,000</td>
+            </tr>
+            <tr>
+              <td>4 Bedroom Villa</td><td>461 m²</td><td>$1,200,000</td>
+              <td><span class="roi__badge">6%</span></td><td>$72,000</td>
             </tr>
             <tr class="roi__cta-row"><td colspan="5"><button class="btn btn--gold" onclick="openModal('roi')">Get a Personalized Investment Plan</button></td></tr>
           </tbody>
@@ -436,53 +495,57 @@
       </div>
       <div class="gallery__track-wrap reveal" style="transition-delay:.1s">
         <div class="gallery__track" id="galTrack">
-          <div class="gallery__slide"><img src="images/gallery-1.jpg" alt="Gallery 1" loading="lazy" /></div>
-          <div class="gallery__slide"><img src="images/gallery-2.jpg" alt="Gallery 2" loading="lazy" /></div>
-          <div class="gallery__slide"><img src="images/gallery-3.jpg" alt="Gallery 3" loading="lazy" /></div>
-          <div class="gallery__slide"><img src="images/gallery-4.jpg" alt="Gallery 4" loading="lazy" /></div>
-          <div class="gallery__slide"><img src="images/gallery-5.jpg" alt="Gallery 5" loading="lazy" /></div></div>
+          <div class="gallery__slide"><img src="https://www.anavasamui.com/images/anava-pool-view.jpg" alt="Gallery 1" loading="lazy" /></div>
+          <div class="gallery__slide"><img src="https://www.anavasamui.com/images/anava-beachfront.jpg" alt="Gallery 2" loading="lazy" /></div>
+          <div class="gallery__slide"><img src="https://www.anavasamui.com/images/anava-architecture.jpg" alt="Gallery 3" loading="lazy" /></div>
+          <div class="gallery__slide"><img src="https://www.anavasamui.com/images/anava-interior.jpg" alt="Gallery 4" loading="lazy" /></div>
+          <div class="gallery__slide"><img src="https://www.anavasamui.com/images/anava-master-plan.jpg" alt="Gallery 5" loading="lazy" /></div></div>
       </div>
     </div>
   </section>
 
   <section class="section" id="location">
     <div class="container">
-      <h2 class="section-title reveal">Prime Location</h2>
+      <h2 class="section-title reveal">Prime Beachfront Location in Bangrak</h2>
       <div class="location__grid">
         <div class="reveal">
-          <p class="location__desc">ANAVA Samui is located on the northeastern coast of Koh Samui in the Bangrak area (Bo Phut district). This prime location offers easy access to the island's best attractions, dining, and transportation links while maintaining a peaceful beachfront setting on the Gulf of Thailand.</p>
+          <p class="location__desc">Located on pristine Bangrak Beach in Bo Phut, Koh Samui, ANAVA Samui offers an unbeatable position in one of Thailand's most sought-after tropical destinations. The development provides direct beach access with breathtaking views of the Gulf of Thailand, while maintaining close proximity to major attractions, shopping, dining, and international airport facilities.</p>
           <div class="location__distances">
-            <div class="location__dist-row">
-              <span class="location__place">Bangrak Beach</span>
-              <span class="location__time">On-site (200 m)</span>
-            </div>
             <div class="location__dist-row">
               <span class="location__place">Samui International Airport</span>
               <span class="location__time">5 min drive</span>
             </div>
             <div class="location__dist-row">
               <span class="location__place">Fisherman's Village</span>
-              <span class="location__time">7 min drive</span>
+              <span class="location__time">10 min drive</span>
             </div>
             <div class="location__dist-row">
               <span class="location__place">Chaweng Beach</span>
               <span class="location__time">15 min drive</span>
             </div>
             <div class="location__dist-row">
-              <span class="location__place">Central Festival Samui</span>
+              <span class="location__place">Bang Rak Beach</span>
+              <span class="location__time">1 min walk</span>
+            </div>
+            <div class="location__dist-row">
+              <span class="location__place">Samui Central Shopping Mall</span>
               <span class="location__time">12 min drive</span>
             </div>
             <div class="location__dist-row">
-              <span class="location__place">Bangkok Samui Hospital</span>
-              <span class="location__time">10 min drive</span>
+              <span class="location__place">Big Buddha Temple</span>
+              <span class="location__time">15 min drive</span>
             </div>
             <div class="location__dist-row">
-              <span class="location__place">Lomprayah Pier</span>
-              <span class="location__time">5 min drive</span>
+              <span class="location__place">Namuang Waterfall</span>
+              <span class="location__time">20 min drive</span>
+            </div>
+            <div class="location__dist-row">
+              <span class="location__place">Royal Samui Golf Club</span>
+              <span class="location__time">18 min drive</span>
             </div></div>
         </div>
         <div class="location__map reveal" style="transition-delay:.15s">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.4!2d100.065!3d9.555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMzMnMTguMCJOIDEwMMKwMDMnNTQuMCJF!5e0!3m2!1sen!2sth!4v1" allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.6524892745646!2d100.78614!3d8.152896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30502e9c8f8f8f8f%3A0x0!2sANAVA%20Samui!5e0!3m2!1sen!2sth!4v1234567890" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -493,31 +556,35 @@
       <h2 class="section-title reveal">About the Developer</h2>
       <div class="developer__grid">
         <div class="developer__image reveal">
-          <img src="images/developer.jpg" alt="Zhongfa Property" loading="lazy" />
+          <img src="https://www.anavasamui.com/images/zhongfa-logo.jpg" alt="Zhongfa Property (HK) Limited" loading="lazy" />
         </div>
         <div class="reveal" style="transition-delay:.15s">
-          <div class="developer__logo">Zhongfa Property</div>
-          <p class="developer__desc">Zhongfa Property (HK) Limited is the developer behind ANAVA Samui — a company focused on landmark resort residences in Southeast Asia's premier island destinations. ANAVA represents a commitment to architectural excellence, sustainable development, and investment-grade returns through a professional hotel management partnership.</p>
+          <div class="developer__logo">Zhongfa Property (HK) Limited</div>
+          <p class="developer__desc">Zhongfa Property (HK) Limited is an international real estate developer specializing in tourism and luxury residential developments across Asia, Africa, North America, and Europe. The company focuses on creating global cultural tourism destinations and high-end lifestyle properties, integrating international standards with local market understanding. ANAVA Samui represents their first flagship project in Thailand and demonstrates their commitment to delivering world-class residential communities.</p>
           <div class="developer__stats">
             <div class="developer__stat-row">
-              <span class="developer__stat-key">Distinction</span>
-              <span class="developer__stat-val">First freehold oceanview condo in Koh Samui in 20 years</span>
+              <span class="developer__stat-key">Founded</span>
+              <span class="developer__stat-val">1993</span>
             </div>
             <div class="developer__stat-row">
-              <span class="developer__stat-key">Pool Concept</span>
-              <span class="developer__stat-val">Only water-theme condo in Koh Samui</span>
+              <span class="developer__stat-key">Headquarters</span>
+              <span class="developer__stat-val">Hong Kong</span>
             </div>
             <div class="developer__stat-row">
-              <span class="developer__stat-key">Investment</span>
-              <span class="developer__stat-val">Only project with fixed ROI guarantee on the island</span>
+              <span class="developer__stat-key">Specialization</span>
+              <span class="developer__stat-val">International Tourism Real Estate Development</span>
             </div>
             <div class="developer__stat-row">
-              <span class="developer__stat-key">Total Units</span>
-              <span class="developer__stat-val">564</span>
+              <span class="developer__stat-key">Global Presence</span>
+              <span class="developer__stat-val">Projects across 5 continents</span>
             </div>
             <div class="developer__stat-row">
-              <span class="developer__stat-key">Handover</span>
-              <span class="developer__stat-val">Q1 2027</span>
+              <span class="developer__stat-key">Thailand Projects</span>
+              <span class="developer__stat-val">First major development with ANAVA Samui</span>
+            </div>
+            <div class="developer__stat-row">
+              <span class="developer__stat-key">Business Focus</span>
+              <span class="developer__stat-val">Global cultural tourism and high-end lifestyle destinations</span>
             </div></div>
         </div>
       </div>
@@ -528,10 +595,10 @@
     <div class="container">
       <div class="final-cta__grid">
         <div class="reveal">
-          <h2>Still Have Questions About ANAVA Samui?</h2>
+          <h2>Still Have Questions About ANAVA Samui Oceanview Condominium?</h2>
           <p>Our experts will answer all questions about pricing, layouts, investment returns, and the purchase process.</p>
           <div class="final-cta__contact">
-            <div>Bangrak Beach, Bo Phut, Koh Samui, Surat Thani, Thailand</div>
+            <div>Highway 4171, Bo Phut, Ko Samui, Surat Thani 84320, Thailand</div>
             <div><a href="mailto:info@anavasamui.com">info@anavasamui.com</a></div>
             <div><a href="https://www.anavasamui.com" target="_blank">www.anavasamui.com</a></div>
           </div>
@@ -539,11 +606,14 @@
         <div class="final-cta__form-box reveal" style="transition-delay:.15s">
           <div class="final-cta__form-title">Request a Callback</div>
           <form id="mainForm" onsubmit="submitForm(event,'main')">
-            <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Your name" required /></div>
-            <div class="form-group"><input type="tel" name="phone" class="form-input" placeholder="Phone number" required /></div>
+            
+          <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Your name" required /></div>
+          <div class="form-group"><input type="tel" name="phone" class="form-input" placeholder="Phone number" required /></div>
+          <div class="form-group"><input type="email" name="email" class="form-input" placeholder="Email" /></div>
             <input type="hidden" name="formname" value="Main Callback" />
             <button type="submit" class="btn btn--gold" style="width:100%;margin-top:12px">Send a Request</button>
-            <p class="form-privacy">I confirm I have read and accept the <a href="#">Privacy Policy</a></p>
+            
+          <label class="form-consent"><input type="checkbox" name="privacy" required /> <span>I confirm I have read and accept the <a href="#">Privacy Policy</a></span></label>
             <div class="form-success">Thank you! We'll be in touch shortly.</div>
           </form>
         </div>
@@ -552,7 +622,7 @@
   </section>
 
   <footer class="footer">
-    <span>&copy; 2026 ANAVA Samui. All rights reserved.</span>
+    <span>&copy; 2026 ANAVA Samui Oceanview Condominium. All rights reserved.</span>
     <div style="display:flex;gap:24px"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
   </footer>
 
@@ -561,19 +631,30 @@
       <button class="modal-close" onclick="closeModal()">&times;</button>
       <h3>Request a Callback</h3>
       <form id="modalForm" onsubmit="submitForm(event,'modal')">
-        <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Your name" required /></div>
-        <div class="form-group"><input type="tel" name="phone" class="form-input" placeholder="Phone number" required /></div>
+        
+          <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Your name" required /></div>
+          <div class="form-group"><input type="tel" name="phone" class="form-input" placeholder="Phone number" required /></div>
+          <div class="form-group"><input type="email" name="email" class="form-input" placeholder="Email" /></div>
         <input type="hidden" name="formname" value="Modal" />
         <button type="submit" class="btn btn--gold" style="width:100%;margin-top:12px">Send a Request</button>
-        <p class="form-privacy">I confirm I have read and accept the <a href="#">Privacy Policy</a></p>
+        
+          <label class="form-consent"><input type="checkbox" name="privacy" required /> <span>I confirm I have read and accept the <a href="#">Privacy Policy</a></span></label>
         <div class="form-success">Thank you! We'll be in touch shortly.</div>
       </form>
     </div>
   </div>
 
   <script>
-    var WEBHOOK = 'https://tranio.ru/lead-management/tilda_to_lead/sd_lp_anava_samui_ru/';
-    var PROJECT = 'ANAVA Samui';
+    var WEBHOOK = '';
+    var PROJECT = 'ANAVA Samui Oceanview Condominium';
+
+    // Language switcher
+    function switchLang(lang) {
+      document.body.setAttribute('data-lang', lang);
+      document.querySelectorAll('.lang-switch__btn').forEach(function(b){
+        b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      });
+    }
 
     // Nav scroll
     var nav = document.getElementById('mainNav');
@@ -615,29 +696,23 @@
     function closeModal(){ document.getElementById('modal').classList.remove('open'); }
     function closeModalOutside(e){ if(e.target === e.currentTarget) closeModal(); }
 
-    // Form submit → CRM webhook
+    // Form submit
     function submitForm(e, formId) {
       e.preventDefault();
       var form = e.target;
+      var privacy = form.querySelector('input[name=privacy]');
+      if (privacy && !privacy.checked) { privacy.focus(); return; }
       var data = new FormData(form);
       data.append('project', PROJECT);
       data.append('formid', formId);
+      data.append('language', document.body.getAttribute('data-lang') || 'en');
       var body = new URLSearchParams(data).toString();
-
       if(!WEBHOOK) { showSuccess(form); return; }
-
-      fetch(WEBHOOK, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body,
-        mode: 'no-cors'
-      }).catch(function(){});
-
+      fetch(WEBHOOK, { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body, mode:'no-cors' }).catch(function(){});
       showSuccess(form);
     }
-
     function showSuccess(form) {
-      form.querySelectorAll('input,button').forEach(function(el){ el.style.display='none'; });
+      form.querySelectorAll('input:not([type=hidden]),button,label').forEach(function(el){ el.style.display='none'; });
       var s = form.querySelector('.form-success');
       if(s) s.style.display = 'block';
     }
